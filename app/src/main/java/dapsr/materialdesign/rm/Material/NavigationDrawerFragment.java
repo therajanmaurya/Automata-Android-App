@@ -20,6 +20,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import dapsr.materialdesign.rm.FragmentAndActivity.BasicAutomata;
+import dapsr.materialdesign.rm.FragmentAndActivity.MealyAndMoore;
+import dapsr.materialdesign.rm.FragmentAndActivity.REAndConversion;
 import dapsr.materialdesign.rm.FragmentAndActivity.viewpager;
 import dapsr.materialdesign.rm.R;
 
@@ -42,11 +45,13 @@ public class NavigationDrawerFragment extends Fragment {
         // Required empty public constructor
     }
 
+   public static String[] titles = {"Basic Automata", "DFA And NFA", "Mealy and Moore Machines","RE And Conversions"};
+
     public static List<NavigationItemInformation> getData() {
         //load only static data inside a drawer
         List<NavigationItemInformation> data = new ArrayList<>();
         int[] icons = {R.drawable.ic_number1, R.drawable.ic_number1, R.drawable.ic_number1, R.drawable.ic_number1};
-        String[] titles = {"Home", "Dapsr", "Dapsr", "Dapsr","Dapsr"};
+
         for (int i = 0; i < titles.length; i++) {
             NavigationItemInformation current = new NavigationItemInformation();
             current.iconId = icons[i % icons.length];
@@ -97,7 +102,7 @@ public class NavigationDrawerFragment extends Fragment {
                 switch (position) {
                     case 0:
 
-                        viewpager vp1 = new viewpager();
+                        BasicAutomata vp1 = new BasicAutomata();
                         ft.replace(R.id.frame_container, vp1);
                         ft.commit();
                         mDrawerLayout.closeDrawers();
@@ -112,14 +117,14 @@ public class NavigationDrawerFragment extends Fragment {
                         break;
 
                     case 2:
-                        viewpager vp3 = new viewpager();
+                        MealyAndMoore vp3 = new MealyAndMoore();
                         ft.replace(R.id.frame_container, vp3);
                         ft.commit();
                         mDrawerLayout.closeDrawers();
                         break;
 
                     case 3:
-                        viewpager vp4 = new viewpager();
+                        REAndConversion vp4 = new REAndConversion();
                         ft.replace(R.id.frame_container, vp4);
                         ft.commit();
                         mDrawerLayout.closeDrawers();
@@ -144,7 +149,8 @@ public class NavigationDrawerFragment extends Fragment {
 
                 }else
                     MainActivity.toolbar.setTitle(titlesNew[position]);*/
-
+                recyclerView.setSelected(true);
+                MainActivity.toolbar.setTitle(titles[position]);
             }
 
             @Override

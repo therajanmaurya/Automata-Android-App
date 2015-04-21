@@ -76,7 +76,7 @@ public class viewpager extends Fragment  {
 
         public Context context;
 
-        String [] title = {"TAB1","TAB2","TAB3"};
+        String [] title = {"DFAs","NFAs"};
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);
 
@@ -85,22 +85,19 @@ public class viewpager extends Fragment  {
 
 
         public Fragment getItem(int num) {
-//            switch (num) {
-//                case 0:
-//
-//                    return MyFragment.getInstance(num);
-//
-//                case 1:
-//
-//                    return MyFragment.getInstance(num);
-//
-//                case 2:
+            switch (num) {
+                case 0:
 
-                    return MyFragment.getInstance(num);
+                    return DFA.getInstance(num);
 
-//
-//            }
-//            return null;
+                case 1:
+
+                    return NFA.getInstance(num);
+
+
+
+            }
+            return null;
 
         }
 

@@ -2,25 +2,27 @@ package dapsr.materialdesign.rm.Material;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
-import dapsr.materialdesign.rm.FragmentAndActivity.FloatingActivity;
-import dapsr.materialdesign.rm.FragmentAndActivity.viewpager;
+import dapsr.materialdesign.rm.FragmentAndActivity.About;
+import dapsr.materialdesign.rm.FragmentAndActivity.BasicAutomata;
+import dapsr.materialdesign.rm.FragmentAndActivity.DFAtoNFA;
+import dapsr.materialdesign.rm.FragmentAndActivity.WebViewRE;
 import dapsr.materialdesign.rm.R;
 
 
 public class MainActivity extends ActionBarActivity {
 
 
-    private Toolbar toolbar;
+    public static Toolbar toolbar;
 
 
     @Override
@@ -36,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
 
         if (savedInstanceState == null) {
-            viewpager view = new viewpager();
+            BasicAutomata view = new BasicAutomata();
             getSupportFragmentManager()
 
                     .beginTransaction().replace(R.id.frame_container, view)
@@ -55,14 +57,14 @@ public class MainActivity extends ActionBarActivity {
 
 
         final FloatingActionButton first = (FloatingActionButton) findViewById(R.id.small1);
-        first.setIcon(R.drawable.ic_abstract);
+        first.setIcon(R.drawable.ic_action_home);
         first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(MainActivity.this, FloatingActivity.class);
+                Intent in = new Intent(MainActivity.this, WebViewRE.class);
                 startActivity(in);
 
-                Toast.makeText(MainActivity.this, "first button", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "first button", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -73,9 +75,9 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
-                Intent ini = new Intent(MainActivity.this, FloatingActivity.class);
+                Intent ini = new Intent(MainActivity.this, DFAtoNFA.class);
                 startActivity(ini);
-                Toast.makeText(MainActivity.this, "second button", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(MainActivity.this, "second button", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -97,6 +99,10 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            DialogFragment aboutD = new About();
+            aboutD.show(getSupportFragmentManager(), "ABOUT_DIALOG");
+
             return true;
         }
 

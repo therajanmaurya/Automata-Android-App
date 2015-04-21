@@ -53,7 +53,7 @@
                 fab:fab_colorPressed="@color/colorAccent"
                 fab:fab_size="mini"
                 android:background="@drawable/card_background_white"
-                fab:fab_title="first"/>
+                fab:fab_title="Regular Expression to NFA "/>
 
             <com.getbase.floatingactionbutton.FloatingActionButton
                 android:id="@+id/small2"
@@ -63,7 +63,7 @@
                 fab:fab_colorNormal="@color/colorAccent"
                 fab:fab_colorPressed="@color/colorAccent"
                 fab:fab_size="mini"
-                fab:fab_title="second"/>
+                fab:fab_title="DFA to NFA"/>
 
         </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
