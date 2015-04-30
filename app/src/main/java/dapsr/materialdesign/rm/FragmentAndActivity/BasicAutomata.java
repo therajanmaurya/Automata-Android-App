@@ -32,7 +32,7 @@ public class BasicAutomata extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager ;
     protected RecyclerViewAdapter mAdapter;
 
-    private int icon [] = {R.drawable.basic,R.drawable.basic2,R.drawable.basic3,R.drawable.basic4,R.drawable.basic5,R.drawable.basic6,R.drawable.basic7,R.drawable.basic8,R.drawable.basic9,R.drawable.basic10,R.drawable.basic11,R.drawable.basic12,R.drawable.basic13,R.drawable.basic14,R.drawable.basic15,R.drawable.basic16,R.drawable.basic17,R.drawable.basic18,R.drawable.basic19,R.drawable.basic20,R.drawable.basic21,R.drawable.basic22,R.drawable.basic23,R.drawable.basic24,R.drawable.basic25,R.drawable.basic27,R.drawable.basic28,R.drawable.basic29,R.drawable.basic30,R.drawable.basic31,R.drawable.basic32,R.drawable.basic33,R.drawable.basic34 };
+    private int icon [] = {R.drawable.basic1,R.drawable.basic2,R.drawable.basic3};
 
 
     private enum LayoutManagerType {

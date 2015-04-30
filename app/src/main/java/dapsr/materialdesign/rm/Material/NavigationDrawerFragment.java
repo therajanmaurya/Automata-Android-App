@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dapsr.materialdesign.rm.FragmentAndActivity.BasicAutomata;
+import dapsr.materialdesign.rm.FragmentAndActivity.DFAACtivity;
 import dapsr.materialdesign.rm.FragmentAndActivity.MealyAndMoore;
 import dapsr.materialdesign.rm.FragmentAndActivity.REAndConversion;
 import dapsr.materialdesign.rm.FragmentAndActivity.viewpager;
@@ -45,7 +46,7 @@ public class NavigationDrawerFragment extends Fragment {
         // Required empty public constructor
     }
 
-   public static String[] titles = {"Basic Automata", "DFA And NFA", "Mealy and Moore Machines","RE And Conversions"};
+   public static String[] titles = {"Home","DFA", "DFA And NFA", "Mealy and Moore Machines","RE And Conversions"};
 
     public static List<NavigationItemInformation> getData() {
         //load only static data inside a drawer
@@ -110,27 +111,34 @@ public class NavigationDrawerFragment extends Fragment {
                         break;
 
                     case 1:
+                        DFAACtivity vp22 = new DFAACtivity();
+                        ft.replace(R.id.frame_container, vp22);
+                        ft.commit();
+                        mDrawerLayout.closeDrawers();
+                        break;
+
+                    case 2:
                         viewpager vp2 = new viewpager();
                         ft.replace(R.id.frame_container, vp2);
                         ft.commit();
                         mDrawerLayout.closeDrawers();
                         break;
 
-                    case 2:
+                    case 3:
                         MealyAndMoore vp3 = new MealyAndMoore();
                         ft.replace(R.id.frame_container, vp3);
                         ft.commit();
                         mDrawerLayout.closeDrawers();
                         break;
 
-                    case 3:
+                    case 4:
                         REAndConversion vp4 = new REAndConversion();
                         ft.replace(R.id.frame_container, vp4);
                         ft.commit();
                         mDrawerLayout.closeDrawers();
                         break;
 
-                    case 4:
+                    case 5:
                         viewpager vp5 = new viewpager();
                         ft.replace(R.id.frame_container, vp5);
                         ft.commit();

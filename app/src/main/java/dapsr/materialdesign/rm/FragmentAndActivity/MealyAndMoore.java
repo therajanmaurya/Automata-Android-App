@@ -33,7 +33,7 @@ public class MealyAndMoore extends Fragment {
     protected RecyclerViewAdapter mAdapter;
     protected String[] mDataset;
     private static final int SPAN_COUNT = 2;
-    private int icon [] = {R.drawable.mm1,R.drawable.mm2,R.drawable.mm3,R.drawable.mm4,R.drawable.mm5,R.drawable.mm6};
+    private int icon [] = {R.drawable.mm1,R.drawable.mm2,R.drawable.mm3,R.drawable.mm4,R.drawable.mm5,R.drawable.mm6,R.drawable.mm7};
 
     private enum LayoutManagerType {
         GRID_LAYOUT_MANAGER,

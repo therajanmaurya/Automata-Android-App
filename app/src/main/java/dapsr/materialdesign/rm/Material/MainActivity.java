@@ -14,7 +14,6 @@ import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import dapsr.materialdesign.rm.FragmentAndActivity.About;
 import dapsr.materialdesign.rm.FragmentAndActivity.BasicAutomata;
-import dapsr.materialdesign.rm.FragmentAndActivity.DFAtoNFA;
 import dapsr.materialdesign.rm.FragmentAndActivity.WebViewRE;
 import dapsr.materialdesign.rm.R;
 
@@ -68,19 +67,19 @@ public class MainActivity extends ActionBarActivity {
 
             }
         });
-
-        final FloatingActionButton second = (FloatingActionButton) findViewById(R.id.small2);
-        second.setIcon(R.drawable.ic_action_home);
-        second.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent ini = new Intent(MainActivity.this, DFAtoNFA.class);
-                startActivity(ini);
-               // Toast.makeText(MainActivity.this, "second button", Toast.LENGTH_SHORT).show();
-
-            }
-        });
+//
+//        final FloatingActionButton second = (FloatingActionButton) findViewById(R.id.small2);
+//        second.setIcon(R.drawable.ic_action_home);
+//        second.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+////                Intent ini = new Intent(MainActivity.this, DFAtoNFA.class);
+////                startActivity(ini);
+//               // Toast.makeText(MainActivity.this, "second button", Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
     }
 
     @Override
