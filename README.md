@@ -1,3 +1,3 @@
-# Material-Design-sample
-  With Floating Action Button Like Inbox
+# Automata Tutorials Android App
+  With latest Mterial Design GUI
   
